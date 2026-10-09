@@ -1,0 +1,14 @@
+Эти файлы нужны, чтобы в мобильном приложении работала кнопка «Экспорт»
+(выгрузка истории оповещений в Word и Excel).
+
+Если в вашем репозитории backend уже есть файл backend/app/services/export.py
+и в backend/app/routes/alerts.py есть маршруты /export-token и /export,
+ничего делать не нужно.
+
+Если нет, скопируйте файлы с сохранением путей в папку backend вашего проекта:
+  app/routes/alerts.py      -> backend/app/routes/alerts.py
+  app/services/export.py    -> backend/app/services/export.py
+  requirements.txt          -> backend/requirements.txt
+
+Затем в окружении backend выполните:  pip install -r requirements.txt
+и перезапустите сервер.
